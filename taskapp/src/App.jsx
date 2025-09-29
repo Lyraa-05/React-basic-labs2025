@@ -7,9 +7,9 @@ import Task from './components/Task';
 function App() {
    const [ taskState, setTaskState ] = useState({
     tasks: [
-      { id: 1, title:"Dishes", description: "Wash them", deadline: "Today" },
-      { id: 2, title: "Hoover", description: "Before Mam comes home", deadline: "Tomorrow" },
-      { id: 3, title: "Bins out", deadline: "Today" }
+      { id: 1, title:"Dishes", description: "Wash them", deadline: "Today", priority: "Low"},
+      { id: 2, title: "Hoover", description: "Before Mam comes home", deadline: "Tomorrow", priority: "Medium" },
+      { id: 3, title: "Bins out", deadline: "Today", priority: "High" }
     ]
   });
   
@@ -25,6 +25,7 @@ function App() {
       title={task.title}
       description={task.description}
       deadline={task.deadline}
+      priority={task.priority}
       key={task.id}
     />
   ))} 
